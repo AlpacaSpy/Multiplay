@@ -4,10 +4,20 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UGUI1
-{ 
-public class UIManager : MonoBehaviourPun
+public class UIManager : MonoBehaviourPunCallbacks
 {
+    public GameObject userNameScreen;
+    public GameObject connectScreen;
+
+    public Button userNameBtn;
+    public InputField userNameInput;
+
+    public Button createRoomBtn;
+    public InputField createRoomInput;
+
+    public Button joinRoomBtn;
+    public InputField joinRoomInput;
+
     public InputField usernameInp;
     public Button loginBtn;
 
@@ -15,6 +25,10 @@ public class UIManager : MonoBehaviourPun
     void Awake()
     {
         PhotonNetwork.ConnectUsingSettings();
+
+        PhotonNetwork.ConnectUsingSettings();
+        userNameBtn.onClick.AddListener((OnClickSubmitName);
+        createRoomBtn.onClick.AddListener(()=>OnClickJoinRoom(joinRoomInput.text));
     }
 
     // Update is called once per frame
@@ -23,4 +37,4 @@ public class UIManager : MonoBehaviourPun
         
     }
 }
-}
+
